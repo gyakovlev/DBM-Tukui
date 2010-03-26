@@ -1,0 +1,7 @@
+## Interface: 30300
+## Title: |cffC495DDTukui|r DBM Skin
+## Notes: Skins DBM bars and icons Tukui-style.
+## Author: Affli @ Howling Fjord (RU)
+
+DBM-BossHealth.xml
+DBT-Template.xml

@@ -2,6 +2,6 @@
 ## Title: |cffC495DDTukui|r DBM Skin
 ## Notes: Skins DBM bars and icons Tukui-style.
 ## Author: Affli @ Howling Fjord (RU)
-
+## Version 1.1alpha
 DBM-BossHealth.xml
 DBT-Template.xml

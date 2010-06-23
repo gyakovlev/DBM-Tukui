@@ -1,160 +1,113 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
 ..\FrameXML\UI.xsd">
-   <Frame name="DBTBarTemplate" virtual="true" frameStrata="MEDIUM" topLevel="true">
+	<Frame name="DBTBarTemplate" virtual="true" frameStrata="MEDIUM" topLevel="true">
+		<Size>
+			<AbsDimension x="195" y="10"/>
+		</Size>
+		<Frames>
+			<StatusBar name="$parentBar">
+				<Size>
+					<AbsDimension x="195" y="6"/>
+				</Size>
+				<Anchors>
+					<Anchor point="CENTER" relativePoint="CENTER">
+						<Offset>
+							<AbsDimension x="0" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="$parentBackground">
+							<Color r="0.1" g="0.1" b="0.1" a="1"/>
+						</Texture>
+					</Layer>
+					<Layer level="OVERLAY">
+						<Texture name="Border" file="Interface\AddOns\!DBM-Tukui\media\aurawatch" level="TOP">
+							<Size>
+								<AbsDimension x="25" y="25"/>
+							</Size>
+							<Color r="0.6" g="0.6" b="0.6" a="1"/>
+							<Anchors>
+								<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT">
+									<Offset>
+										<AbsDimension x="-3" y="-1"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</Texture>
 
-
-
-    <Size>
-            <AbsDimension x="195" y="10"/>
-        </Size>
-        <Frames>
-            <StatusBar name="$parentBar">
-                <Size>
-                    <AbsDimension x="195" y="6"/>
-                </Size>
-                <Anchors>
-                    <Anchor point="BOTTOM" relativePoint="BOTTOM">
-                        <Offset>
-                            <AbsDimension x="0" y="0"/>
-                        </Offset>
-                    </Anchor>
-                </Anchors>
-                <Layers>
-                    <Layer level="BACKGROUND">
-                        <Texture name="$parentBackground">
-                            <Color r="0" g="0" b="0" a="0.7"/>
-                        <Anchors>
-                            <Anchor point="CENTER" relativePoint="CENTER">
-                                <Offset>
-                                    <AbsDimension x="0" y="0"/>
-                                </Offset>
-                                </Anchor>
-                                 <Anchor point="LEFT" relativePoint="LEFT">
-                                       <Offset><AbsDimension x="-1" y="0"/></Offset>
-                                 </Anchor>
-                                 <Anchor point="RIGHT" relativePoint="RIGHT">
-                                       <Offset><AbsDimension x="1" y="0"/></Offset>
-                                  </Anchor>
-                                 <Anchor point="TOP" relativePoint="TOP">
-                                       <Offset><AbsDimension x="0" y="1"/></Offset>
-                                  </Anchor>
-                                 <Anchor point="BOTTOM" relativePoint="BOTTOM">
-                                       <Offset><AbsDimension x="0" y="-1"/></Offset>
-                                  </Anchor>
-                        </Anchors>
-                        </Texture>
-         <Texture name="$parentIcon1">
-                            <Size>
-                                <AbsDimension x="28" y="28"/>
-                            </Size>
-                            <Anchors>
-                                <Anchor point="RIGHT" relativePoint="LEFT">
-                                    <Offset>
-                                        <AbsDimension x="-5" y="8"/>
-                                    </Offset>
-                                </Anchor>
-                            </Anchors>
-                        </Texture>
-
-                    </Layer>
-                    <Layer level="OVERLAY">
-                    <Texture name="Border" file="Interface\AddOns\!DBM-Tukui\media\aurawatch" level="TOP">
-                            <Size>
-                                <AbsDimension x="28" y="28"/>
-                            </Size>
-                            <Color r="0.6" g="0.6" b="0.6" a="1"/>
-                            <Anchors>
-                                <Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT">
-                                    <Offset>
-                                        <AbsDimension x="-5" y="-3"/>
-                                    </Offset>
-                                </Anchor>
-                            </Anchors>
-                        </Texture>
-                    </Layer>
-                    <Layer level="ARTWORK">
-                        <Texture name="$parentSpark" alphaMode="ADD">
-                            <Color r="0" g="0" b="0" a="0.0"/>
-                            <Size>
-                                <AbsDimension x="0" y="0"/>
-                            </Size>
-                            <Anchors>
-                                <Anchor point="CENTER">
-                                    <Offset>
-                                        <AbsDimension x="0" y="0"/>
-                                    </Offset>
-                                </Anchor>
-                            </Anchors>
-                        </Texture>
-                        <FontString name="$parentName" font="Fonts\\SKURRI.ttf" text="">
-                            <FontHeight>
-                             <AbsValue val="9"/>
-                            </FontHeight>
-                            <Shadow>
-                                <offset>
-                                      <AbsDimension x="1" y="-1"/>
-                                   </offset>
-                            <color r="0" g="0" b="0"/>
-                             </Shadow>
-                            <Anchors>
-                                <Anchor point="LEFT" relativePoint="LEFT">
-                                    <Offset>
-                                        <AbsDimension x="0" y="12"/>
-                                    </Offset>
-                                </Anchor>
-                            </Anchors>
-                        </FontString>
-                        <FontString name="$parentTimer" font="Fonts\\SKURRI.ttf" text="">
-                            <FontHeight>
-                             <AbsValue val="9"/>
-                            </FontHeight>
-                            <Shadow>
-                                <offset>
-                                      <AbsDimension x="1" y="-1"/>
-                                   </offset>
-                            <color r="0" g="0" b="0"/>
-                             </Shadow>
-                            <Anchors>
-                                <Anchor point="RIGHT" relativePoint="RIGHT">
-                                    <Offset>
-                                        <AbsDimension x="0" y="12"/>
-                                    </Offset>
-                                </Anchor>
-                            </Anchors>
-                        </FontString>
-                        <Texture name="$parentIcon2">
-                            <Size>
-                                <AbsDimension x="28" y="28"/>
-                            </Size>
-                            <Anchors>
-                                <Anchor point="LEFT" relativePoint="RIGHT">
-                                    <Offset>
-                                        <AbsDimension x="-5" y="8"/>
-                                    </Offset>
-                                </Anchor>
-                            </Anchors>
-                        </Texture>
-                    </Layer>
-                </Layers>
-                <BarTexture name="$parentTexture" file="Interface\\AddOns\\Tukui\\media\\normTex.tga"/>
-                <BarColor r="0.1" g="0.1" b="0.1"/>
-                <Scripts>
-                    <OnLoad>
-                        self:SetMinMaxValues(0, 1)
-                        self:SetValue(1)
-                    </OnLoad>
-                </Scripts>
-            </StatusBar>
-        </Frames>
-
-
-      
-      <Scripts>
-         <OnUpdate function="DBT_Bar_OnUpdate"/>
-         <OnMouseDown function="DBT_Bar_OnMouseDown"/>
-         <OnMouseUp function="DBT_Bar_OnMouseUp"/>
-         <OnHide function="DBT_Bar_OnHide"/>
-      </Scripts>
-   </Frame>
-</Ui> 
-
+					</Layer>
+					<Layer level="ARTWORK">
+						<Texture name="$parentSpark" alphaMode="ADD">
+							<Color r="0" g="0" b="0" a="0.0"/>
+							<Size>
+								<AbsDimension x="0" y="0"/>
+							</Size>
+							<Anchors>
+								<Anchor point="CENTER">
+									<Offset>
+										<AbsDimension x="0" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</Texture>
+						<FontString name="$parentName" inherits="GameFontHighlightSmall" text="">
+							<Anchors>
+								<Anchor point="LEFT" relativePoint="LEFT">
+									<Offset>
+										<AbsDimension x="0" y="12"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+						<FontString name="$parentTimer" inherits="GameFontHighlightSmall" text="">
+							<Anchors>
+								<Anchor point="RIGHT" relativePoint="RIGHT">
+									<Offset>
+										<AbsDimension x="0" y="12"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</FontString>
+						<Texture name="$parentIcon1">
+							<Size>
+								<AbsDimension x="24.2" y="24.2"/>
+							</Size>
+							<Anchors>
+								<Anchor point="RIGHT" relativePoint="LEFT">
+									<Offset>
+										<AbsDimension x="-3" y="9"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</Texture>
+						<Texture name="$parentIcon2">
+							<Size>
+								<AbsDimension x="28" y="28"/>
+							</Size>
+							<Anchors>
+								<Anchor point="LEFT" relativePoint="RIGHT">
+									<Offset>
+										<AbsDimension x="-3" y="8"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+						</Texture>
+					</Layer>
+				</Layers>
+				<BarTexture name="$parentTexture" file="Interface\\AddOns\\Tukui\\media\\normTex.tga"/>
+				<BarColor r="0.1" g="0.1" b="0.1"/>
+				<Scripts>
+					<OnLoad function="DBT_Bar_OnLoad"/>
+				</Scripts>
+			</StatusBar>
+		</Frames>
+		<Scripts>
+			<OnUpdate function="DBT_Bar_OnUpdate"/>
+			<OnMouseDown function="DBT_Bar_OnMouseDown"/>
+			<OnMouseUp function="DBT_Bar_OnMouseUp"/>
+			<OnHide function="DBT_Bar_OnHide"/>
+		</Scripts>
+	</Frame>
+</Ui>	

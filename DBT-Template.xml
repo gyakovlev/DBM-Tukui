@@ -2,47 +2,96 @@
 ..\FrameXML\UI.xsd">
 	<Frame name="DBTBarTemplate" virtual="true" frameStrata="MEDIUM" topLevel="true">
 		<Size>
-			<AbsDimension x="195" y="10"/>
+			<AbsDimension x="200" y="10"/>
 		</Size>
+		<Backdrop bgFile="Interface\AddOns\Tukui\media\textures\blank" edgeFile="Interface\AddOns\!DBM-Tukui\media\blank" tile="false">
+			<Color r="0.1" g="0.1" b="0.1" a="1"/>
+			<EdgeSize>
+				<AbsValue val="1"/>
+			</EdgeSize>
+			<TileSize>
+				<AbsValue val="0"/>
+			</TileSize>
+			<BackgroundInsets>
+				<AbsInset left="-1" right="-1" top="-1" bottom="-1"/>
+			</BackgroundInsets>
+
+		</Backdrop>
+
+		
 		<Frames>
 			<StatusBar name="$parentBar">
 				<Size>
-					<AbsDimension x="195" y="6"/>
+					<AbsDimension x="196" y="6"/>
 				</Size>
 				<Anchors>
 					<Anchor point="CENTER" relativePoint="CENTER">
-						<Offset>
-							<AbsDimension x="0" y="0"/>
-						</Offset>
+						<Offset><AbsDimension x="0" y="0"/></Offset>
 					</Anchor>
+					<Anchor point="LEFT" relativePoint="LEFT">
+						<Offset><AbsDimension x="2" y="0"/></Offset>
+					</Anchor>
+					<Anchor point="RIGHT" relativePoint="RIGHT">
+						<Offset><AbsDimension x="-2" y="0"/></Offset>
+					</Anchor>
+					<Anchor point="TOP" relativePoint="TOP">
+						<Offset><AbsDimension x="0" y="-2"/></Offset>
+					</Anchor>
+					<Anchor point="BOTTOM" relativePoint="BOTTOM">
+						<Offset><AbsDimension x="0" y="2"/></Offset>
+					</Anchor>
+
+
 				</Anchors>
 				<Layers>
 					<Layer level="BACKGROUND">
-						<Texture name="$parentBackground">
-							<Color r="0.1" g="0.1" b="0.1" a="1"/>
-						</Texture>
-					</Layer>
-					<Layer level="OVERLAY">
-						<Texture name="Border" file="Interface\AddOns\!DBM-Tukui\media\aurawatch" level="TOP">
-							<Size>
-								<AbsDimension x="25" y="25"/>
-							</Size>
-							<Color r="0.6" g="0.6" b="0.6" a="1"/>
+<!--						<Texture name="$parentBackground">
+							<Color r="0.1" g="0.1" b="0.1" a="0.75"/>
 							<Anchors>
-								<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT">
-									<Offset>
-										<AbsDimension x="-3" y="-1"/>
-									</Offset>
+								<Anchor point="CENTER" relativePoint="CENTER">
+									<Offset><AbsDimension x="0" y="0"/></Offset>
+								</Anchor>
+								<Anchor point="LEFT" relativePoint="LEFT">
+									<Offset><AbsDimension x="-1" y="0"/></Offset>
+								</Anchor>
+								<Anchor point="RIGHT" relativePoint="RIGHT">
+									<Offset><AbsDimension x="1" y="0"/></Offset>
+								</Anchor>
+								<Anchor point="TOP" relativePoint="TOP">
+									<Offset><AbsDimension x="0" y="1"/></Offset>
+								</Anchor>
+								<Anchor point="BOTTOM" relativePoint="BOTTOM">
+									<Offset><AbsDimension x="0" y="-1"/></Offset>
 								</Anchor>
 							</Anchors>
 						</Texture>
-
+-->
+						<Texture name="IconBackground">
+							<Size><AbsDimension x="30" y="30"/></Size>
+							<Color r="0.1" g="0.1" b="0.1" a="1"/>
+							<Anchors>
+								<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT">
+									<Offset><AbsDimension x="-5" y="-3"/></Offset>
+								</Anchor>
+							</Anchors>
+						</Texture>
 					</Layer>
-					<Layer level="ARTWORK">
+					<Layer level="BORDER">
+						<Texture name="IconBorder">
+							<Size><AbsDimension x="28" y="28"/></Size>
+							<Color r="0.6" g="0.6" b="0.6" a="1"/>
+							<Anchors>
+								<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT">
+									<Offset><AbsDimension x="-6" y="-2"/></Offset>
+								</Anchor>
+							</Anchors>
+						</Texture>
+					</Layer>
+					<Layer level="OVERLAY">
 						<Texture name="$parentSpark" alphaMode="ADD">
 							<Color r="0" g="0" b="0" a="0.0"/>
 							<Size>
-								<AbsDimension x="0" y="0"/>
+								<AbsDimension x="32" y="64"/>
 							</Size>
 							<Anchors>
 								<Anchor point="CENTER">
@@ -56,7 +105,7 @@
 							<Anchors>
 								<Anchor point="LEFT" relativePoint="LEFT">
 									<Offset>
-										<AbsDimension x="0" y="12"/>
+										<AbsDimension x="-1" y="12"/>
 									</Offset>
 								</Anchor>
 							</Anchors>
@@ -65,39 +114,39 @@
 							<Anchors>
 								<Anchor point="RIGHT" relativePoint="RIGHT">
 									<Offset>
-										<AbsDimension x="0" y="12"/>
+										<AbsDimension x="-1" y="12"/>
 									</Offset>
 								</Anchor>
 							</Anchors>
 						</FontString>
 						<Texture name="$parentIcon1">
-							<Size>
-								<AbsDimension x="24.2" y="24.2"/>
-							</Size>
+							<Size><AbsDimension x="26" y="26"/></Size>
 							<Anchors>
-								<Anchor point="RIGHT" relativePoint="LEFT">
+								<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT">
 									<Offset>
-										<AbsDimension x="-3" y="9"/>
+										<AbsDimension x="-7" y="-1"/>
 									</Offset>
 								</Anchor>
 							</Anchors>
+							<TexCoords left="0.08" right="0.92" top="0.08" bottom="0.92"/>
 						</Texture>
 						<Texture name="$parentIcon2">
 							<Size>
-								<AbsDimension x="28" y="28"/>
+								<AbsDimension x="26" y="26"/>
 							</Size>
 							<Anchors>
-								<Anchor point="LEFT" relativePoint="RIGHT">
+								<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT">
 									<Offset>
-										<AbsDimension x="-3" y="8"/>
+										<AbsDimension x="7" y="-1"/>
 									</Offset>
 								</Anchor>
 							</Anchors>
+							<TexCoords left="0.08" right="0.92" top="0.08" bottom="0.92"/>
 						</Texture>
 					</Layer>
 				</Layers>
 				<BarTexture name="$parentTexture" file="Interface\\AddOns\\Tukui\\media\\normTex.tga"/>
-				<BarColor r="0.1" g="0.1" b="0.1"/>
+				<BarColor r="1.0" g="0.7" b="0.0"/>
 				<Scripts>
 					<OnLoad function="DBT_Bar_OnLoad"/>
 				</Scripts>

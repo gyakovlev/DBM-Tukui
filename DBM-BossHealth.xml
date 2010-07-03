@@ -19,8 +19,96 @@
             <Layers>
                <Layer level="BACKGROUND">
                   <Texture name="$parentBackground">
-                     <Color r="0" g="0" b="0" a="0.6"/>
+                     <Color r="0.1" g="0.1" b="0.1" a="1"/>
                      <Anchors>
+                        <Anchor point="CENTER" relativePoint="CENTER">
+                           <Offset>
+                              <AbsDimension x="0" y="0"/>
+                           </Offset>
+                        </Anchor>
+                        <Anchor point="LEFT" relativePoint="LEFT">
+                           <Offset>
+                              <AbsDimension x="-3" y="0"/>
+                           </Offset>
+                        </Anchor>
+                        <Anchor point="RIGHT" relativePoint="RIGHT">
+                           <Offset>
+                              <AbsDimension x="3" y="0"/>
+                           </Offset>
+                        </Anchor>
+                        <Anchor point="TOP" relativePoint="TOP">
+                           <Offset>
+                              <AbsDimension x="0" y="3"/>
+                           </Offset>
+                        </Anchor>
+                        <Anchor point="BOTTOM" relativePoint="BOTTOM">
+                           <Offset>
+                              <AbsDimension x="0" y="-3"/>
+                           </Offset>
+                        </Anchor>
+                     </Anchors>
+
+                  </Texture>
+               </Layer>
+		<Layer level="BORDER">
+						<Texture name="BarBorder">
+							<Size><AbsDimension x="161" y="8"/></Size>
+							<Color r="0.6" g="0.6" b="0.6" a="1"/>
+						<Anchors>
+                        <Anchor point="CENTER" relativePoint="CENTER">
+                           <Offset>
+                              <AbsDimension x="0" y="0"/>
+                           </Offset>
+                        </Anchor>
+                        <Anchor point="LEFT" relativePoint="LEFT">
+                           <Offset>
+                              <AbsDimension x="-2" y="0"/>
+                           </Offset>
+                        </Anchor>
+                        <Anchor point="RIGHT" relativePoint="RIGHT">
+                           <Offset>
+                              <AbsDimension x="2" y="0"/>
+                           </Offset>
+                        </Anchor>
+                        <Anchor point="TOP" relativePoint="TOP">
+                           <Offset>
+                              <AbsDimension x="0" y="2"/>
+                           </Offset>
+                        </Anchor>
+                        <Anchor point="BOTTOM" relativePoint="BOTTOM">
+                           <Offset>
+                              <AbsDimension x="0" y="-2"/>
+                           </Offset>
+                        </Anchor>
+                     </Anchors>
+
+						</Texture>
+					</Layer>
+               <Layer level="OVERLAY">
+                  <FontString name="$parentName" inherits="GameFontHighlight" text="">
+                     <Anchors>
+                        <Anchor point="LEFT" relativePoint="TOPLEFT">
+                           <Offset>
+                              <AbsDimension x="-1" y="8"/>
+                           </Offset>
+                        </Anchor>
+                     </Anchors>
+                  </FontString>
+                  <FontString name="$parentTimer" inherits="GameFontHighlightSmallOutline" text="">
+                     <Anchors>
+                        <Anchor point="RIGHT" relativePoint="TOPRIGHT">
+                           <Offset>
+                              <AbsDimension x="-1" y="8"/>
+                           </Offset>
+                        </Anchor>
+                     </Anchors>
+                  </FontString>
+	</Layer>
+		<Layer level="ARTWORK">
+	<Texture name="InternalBarBorder">
+							<Size><AbsDimension x="161" y="8"/></Size>
+							<Color r="0.1" g="0.1" b="0.1" a="1"/>
+						<Anchors>
                         <Anchor point="CENTER" relativePoint="CENTER">
                            <Offset>
                               <AbsDimension x="0" y="0"/>
@@ -48,27 +136,7 @@
                         </Anchor>
                      </Anchors>
 
-                  </Texture>
-               </Layer>
-               <Layer level="OVERLAY">
-                  <FontString name="$parentName" inherits="GameFontHighlight" text="">
-                     <Anchors>
-                        <Anchor point="LEFT" relativePoint="TOPLEFT">
-                           <Offset>
-                              <AbsDimension x="3" y="7"/>
-                           </Offset>
-                        </Anchor>
-                     </Anchors>
-                  </FontString>
-                  <FontString name="$parentTimer" inherits="GameFontHighlightSmallOutline" text="">
-                     <Anchors>
-                        <Anchor point="RIGHT" relativePoint="TOPRIGHT">
-                           <Offset>
-                              <AbsDimension x="1" y="7"/>
-                           </Offset>
-                        </Anchor>
-                     </Anchors>
-                  </FontString>
+						</Texture>
                </Layer>
             </Layers>
             <Frames>

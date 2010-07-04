@@ -6,7 +6,7 @@
 		</Size>		
 		<Frames>
 			<Button name="IconLeft">
-				<Size><AbsDimension x="28" y="28"/></Size>
+				<Size><AbsDimension x="29" y="29"/></Size>
 				<Anchors>
 					<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT">
 						<Offset><AbsDimension x="-4" y="0"/></Offset>

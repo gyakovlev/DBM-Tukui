@@ -1,12 +1,20 @@
---Credits go to ALZA and Tukz
---[[ DBM settings ]]
+--Some credits go to ALZA and Tukz
+
 local _, class = UnitClass("player")
 local t = RAID_CLASS_COLORS[class]
 local r, g, b = t.r, t.g, t.b
 
+--Bae Skinning function
+function DBT_Bar_Skin(self)
+	TukuiDB:SetTemplate(self)
+end
 
+--Icon Skinning function
+function DBT_Icon_Skin(self)
+	TukuiDB:SetTemplate(self)
+end
 
-
+--[[ DBM settings ]]
 local UploadDBM = function()
     if(DBM_SavedOptions) then table.wipe(DBM_SavedOptions) end
 

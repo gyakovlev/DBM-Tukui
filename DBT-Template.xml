@@ -3,23 +3,21 @@
 	<Frame name="DBTBarTemplate" virtual="true" frameStrata="MEDIUM" topLevel="true">
 		<Size>
 			<AbsDimension x="200" y="10"/>
-		</Size>
-		<Backdrop bgFile="Interface\AddOns\Tukui\media\textures\blank" edgeFile="Interface\AddOns\!DBM-Tukui\media\blank" tile="false">
-			<Color r="0.1" g="0.1" b="0.1" a="1"/>
-			<EdgeSize>
-				<AbsValue val="1"/>
-			</EdgeSize>
-			<TileSize>
-				<AbsValue val="0"/>
-			</TileSize>
-			<BackgroundInsets>
-				<AbsInset left="-1" right="-1" top="-1" bottom="-1"/>
-			</BackgroundInsets>
-
-		</Backdrop>
-
-		
+		</Size>		
 		<Frames>
+			<Button name="IconLeft">
+				<Size><AbsDimension x="28" y="28"/></Size>
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT">
+						<Offset><AbsDimension x="-4" y="0"/></Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnLoad function="DBT_Icon_Skin"/>
+					<OnSizeChanged function="DBT_Icon_Skin" />
+				</Scripts>
+			</Button>
+
 			<StatusBar name="$parentBar">
 				<Size>
 					<AbsDimension x="196" y="6"/>
@@ -66,26 +64,6 @@
 							</Anchors>
 						</Texture>
 -->
-						<Texture name="IconBackground">
-							<Size><AbsDimension x="30" y="30"/></Size>
-							<Color r="0.1" g="0.1" b="0.1" a="1"/>
-							<Anchors>
-								<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT">
-									<Offset><AbsDimension x="-5" y="-3"/></Offset>
-								</Anchor>
-							</Anchors>
-						</Texture>
-					</Layer>
-					<Layer level="BORDER">
-						<Texture name="IconBorder">
-							<Size><AbsDimension x="28" y="28"/></Size>
-							<Color r="0.6" g="0.6" b="0.6" a="1"/>
-							<Anchors>
-								<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT">
-									<Offset><AbsDimension x="-6" y="-2"/></Offset>
-								</Anchor>
-							</Anchors>
-						</Texture>
 					</Layer>
 					<Layer level="OVERLAY">
 						<Texture name="$parentSpark" alphaMode="ADD">
@@ -157,6 +135,8 @@
 			<OnMouseDown function="DBT_Bar_OnMouseDown"/>
 			<OnMouseUp function="DBT_Bar_OnMouseUp"/>
 			<OnHide function="DBT_Bar_OnHide"/>
+			<OnLoad function="DBT_Bar_Skin" />
+
 		</Scripts>
 	</Frame>
 </Ui>	

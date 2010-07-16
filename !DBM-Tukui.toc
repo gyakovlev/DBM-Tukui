@@ -2,9 +2,9 @@
 ## Title: |cffC495DDTukui|r |cffffd200DBM|r Skin
 ## Notes: Skins DBM bars and icons Tukui-like.
 ## Author: Affli @ Howling Fjord (RU)
-## Version 2.1b
+## Version 2.2c
 ## X-Website: http://github.com/Affli/DBM-Tukui
-## OptionalDeps: Tukui
+## LoadWith: Tukui
 DBM-BossHealth.xml
 DBT-Template.xml
 core.lua

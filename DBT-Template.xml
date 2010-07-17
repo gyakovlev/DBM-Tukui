@@ -13,8 +13,8 @@
 					</Anchor>
 				</Anchors>
 				<Scripts>
-					<OnLoad function="DBT_Icon_Skin"/>
-					<OnSizeChanged function="DBT_Icon_Skin" />
+					<OnLoad function="DBT_Skin"/>
+					<OnSizeChanged function="DBT_Skin" />
 				</Scripts>
 			</Button>
 
@@ -135,7 +135,7 @@
 			<OnMouseDown function="DBT_Bar_OnMouseDown"/>
 			<OnMouseUp function="DBT_Bar_OnMouseUp"/>
 			<OnHide function="DBT_Bar_OnHide"/>
-			<OnLoad function="DBT_Bar_Skin" />
+			<OnLoad function="DBT_Skin" />
 
 		</Scripts>
 	</Frame>

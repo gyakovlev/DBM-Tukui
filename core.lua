@@ -4,14 +4,9 @@ local _, class = UnitClass("player")
 local t = RAID_CLASS_COLORS[class]
 local r, g, b = t.r, t.g, t.b
 
---Bae Skinning function
-function DBT_Bar_Skin(self)
-	TukuiDB:SetTemplate(self)
-end
-
---Icon Skinning function
-function DBT_Icon_Skin(self)
-	TukuiDB:SetTemplate(self)
+--Skinning function
+function DBT_Skin(self)
+	TukuiDB.SetTemplate(self)
 end
 
 --[[ DBM settings ]]

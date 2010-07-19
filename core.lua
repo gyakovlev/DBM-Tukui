@@ -121,3 +121,43 @@ f:SetScript("OnEvent", function()
     end
 end)
 
+--Hooks /range and /distance commands, disabled for now.
+--[[local originalSlashCmdHandler = SlashCmdList["DBMRANGE"]
+SlashCmdList["DBMRANGE"] = function(input)
+    originalSlashCmdHandler(input)
+    if _G.DBMRangeCheck then
+        -- frame exists now
+        -- do whatever you want to do to the frame here
+--	print("HOOKED!")
+	TukuiDB.SetTemplate(DBMRangeCheck)
+        -- hook is no longer needed
+        SlashCmdList["DBMRANGE"] = originalSlashCmdHandler
+    end
+end]]
+--Make shure DBM is loaded before calling
+if not (IsAddOnLoaded("DBM-Core")) then
+LoadAddOn("DBM-Core")
+--LoadAddOn("Tukui")
+end
+DBM.RangeCheck:Show()
+DBM.RangeCheck:Hide()
+--[[local function SetTemplate(f)
+f:SetBackdrop( {
+	  bgFile = "Interface\\AddOns\\Tukui\\media\\textures\\blank", 
+	  edgeFile = "Interface\\AddOns\\Tukui\\media\\textures\\blank", 
+	  tile = false, tileSize = 0, edgeSize = 1, 
+	  insets = { left = -1, right = -1, top = -1, bottom = -1},
+	})
+	f:SetBackdropColor(.1,.1,.1,1)
+	f:SetBackdropBorderColor(.6,.6,.6,1)
+--	f:SetBackdropColor(.1,.1,.1,1)
+--	f:SetBackdropBorderColor(.6,.6,.6,1)
+end
+SetTemplate(DBMRangeCheck)
+]]
+	
+TukuiDB.SetTemplate(DBMRangeCheck)
+--Dirty hack to fix blue backdrop. disabled.
+--DBMRangeCheck:SetBackdropColor(unpack(TukuiDB.media.backdropcolor))
+--DBMRangeCheck:SetBackdropBorderColor(unpack(TukuiDB.media.bordercolor))
+
